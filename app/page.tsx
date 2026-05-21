@@ -94,7 +94,7 @@ function Navbar() {
       transition: 'all 0.35s',
     }}>
       <div className="section-container" style={{ height: 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <img src="/assets/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 36, width: 'auto', display: 'block', filter: scrolled ? 'brightness(0)' : 'none' }} />
+        <img src="/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 36, width: 'auto', display: 'block', filter: scrolled ? 'brightness(0)' : 'none' }} />
         <a
           href={withUtms(CHECKOUT_ANUAL_URL)}
           className="btn-primary"
@@ -136,7 +136,7 @@ function NotificationBar() {
 function AcademyHeroSection() {
   const withUtms = useWithUtms()
   return (
-    <section style={{ paddingTop: 64, paddingBottom: 96, position: 'relative', overflow: 'hidden', backgroundImage: 'url(/assets/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section style={{ paddingTop: 64, paddingBottom: 96, position: 'relative', overflow: 'hidden', backgroundImage: 'url(/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <NotificationBar />
       {/* overlay escuro sobre o background */}
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,10,30,0.72)', pointerEvents: 'none' }} />
@@ -233,20 +233,20 @@ function AcademyHeroSection() {
 ───────────────────────────────────────────── */
 
 const clientLogos = [
-  { src: '/assets/cliente-ajs.png',       name: 'AJS' },
-  { src: '/assets/cliente-dm.png',        name: 'DM' },
-  { src: '/assets/cliente-hotelaria.png', name: 'Hotelaria' },
-  { src: '/assets/cliente-instituto.png', name: 'Instituto' },
-  { src: '/assets/cliente-kaizen.png',    name: 'Kaizen' },
-  { src: '/assets/cliente-maximus.png',   name: 'Maximus' },
-  { src: '/assets/cliente-mbi.png',       name: 'MBI' },
-  { src: '/assets/cliente-mental.png',    name: 'Mental One' },
-  { src: '/assets/cliente-perpetuo.png',  name: 'Perpétuo' },
-  { src: '/assets/cliente-positiva.png',  name: 'Positiva' },
-  { src: '/assets/cliente-salvus.png',    name: 'Salvus' },
-  { src: '/assets/cliente-taugor.png',    name: 'Taugor' },
-  { src: '/assets/cliente-ticto.png',     name: 'Ticto' },
-  { src: '/assets/cliente-tio.png',       name: 'Tio' },
+  { src: '/cliente-ajs.png',       name: 'AJS' },
+  { src: '/cliente-dm.png',        name: 'DM' },
+  { src: '/cliente-hotelaria.png', name: 'Hotelaria' },
+  { src: '/cliente-instituto.png', name: 'Instituto' },
+  { src: '/cliente-kaizen.png',    name: 'Kaizen' },
+  { src: '/cliente-maximus.png',   name: 'Maximus' },
+  { src: '/cliente-mbi.png',       name: 'MBI' },
+  { src: '/cliente-mental.png',    name: 'Mental One' },
+  { src: '/cliente-perpetuo.png',  name: 'Perpétuo' },
+  { src: '/cliente-positiva.png',  name: 'Positiva' },
+  { src: '/cliente-salvus.png',    name: 'Salvus' },
+  { src: '/cliente-taugor.png',    name: 'Taugor' },
+  { src: '/cliente-ticto.png',     name: 'Ticto' },
+  { src: '/cliente-tio.png',       name: 'Tio' },
 ]
 const areas1 = [
   { icon: '🏢', text: 'Empresarial' },
@@ -277,25 +277,25 @@ const areas2 = [
    MÓDULOS DO ACADEMY
 ───────────────────────────────────────────── */
 const academyModules = [
-  { image: '/assets/academy/vendedor-top-1.png', title: 'Vendedor Top 1', desc: 'Mindset, método e execução para se tornar o top performer da sua área.' },
-  { image: '/assets/academy/master-sales-script.png', title: 'Master Sales Script', desc: 'Scripts completos prontos para prospecção, follow-up e fechamento.' },
-  { image: '/assets/academy/persuasao-pro.png', title: 'Persuasão Pro', desc: 'Técnicas avançadas de influência, rapport e negociação para fechar mais.' },
-  { image: '/assets/academy/workshop-prospeccao-7d.png', title: 'Workshop Prospecção 7D', desc: 'Um plano prático para gerar demanda e encher o funil em 7 dias.' },
-  { image: '/assets/academy/intensivo-fechamento-em-reuniao.png', title: 'Intensivo Fechamento em Reunião', desc: 'Como conduzir e fechar reuniões comerciais com consistência.' },
-  { image: '/assets/academy/kit-gestao-comercial.png', title: 'Kit de Gestão Comercial', desc: 'Ferramentas e indicadores para quem lidera ou quer liderar um time de vendas.' },
-  { image: '/assets/academy/analises-de-call---yuri-barbosa.png', title: 'Análises de Call — Yuri Barbosa', desc: 'Reviews reais de ligações comerciais com feedback ao vivo.' },
-  { image: '/assets/academy/raio-x-da-personalidade.png', title: 'Raio X da Personalidade', desc: 'Como adaptar sua abordagem ao perfil de cada cliente e vender mais.' },
-  { image: '/assets/academy/lideranca-financeira.png', title: 'Liderança Financeira', desc: 'Como construir inteligência financeira dentro da operação comercial.' },
-  { image: '/assets/academy/mapa-da-otimizacao.png', title: 'Mapa da Otimização', desc: 'Como identificar os gargalos que estão travando seu crescimento.' },
-  { image: '/assets/academy/desafio-plano-sem-risco-2026---matheus-matuta.png', title: 'Desafio Plano Sem Risco 2026', desc: 'Planejamento comercial prático com metas reais para o ano.' },
-  { image: '/assets/academy/a-riqueza-da-necessidade.png', title: 'A Riqueza da Necessidade', desc: 'Como descobrir a dor real do cliente e usá-la como alavanca de venda.' },
-  { image: '/assets/academy/eleve-se.png', title: 'Eleve-se', desc: 'Desenvolvimento pessoal e profissional para vendedores de alto nível.' },
-  { image: '/assets/academy/analise-de-negocios---vinicius-de-sa.png', title: 'Análises de Negócios — Vinícius de Sá', desc: 'Diagnósticos reais de operações comerciais comentados ao vivo.' },
+  { image: '/academy/vendedor-top-1.png', title: 'Vendedor Top 1', desc: 'Mindset, método e execução para se tornar o top performer da sua área.' },
+  { image: '/academy/master-sales-script.png', title: 'Master Sales Script', desc: 'Scripts completos prontos para prospecção, follow-up e fechamento.' },
+  { image: '/academy/persuasao-pro.png', title: 'Persuasão Pro', desc: 'Técnicas avançadas de influência, rapport e negociação para fechar mais.' },
+  { image: '/academy/workshop-prospeccao-7d.png', title: 'Workshop Prospecção 7D', desc: 'Um plano prático para gerar demanda e encher o funil em 7 dias.' },
+  { image: '/academy/intensivo-fechamento-em-reuniao.png', title: 'Intensivo Fechamento em Reunião', desc: 'Como conduzir e fechar reuniões comerciais com consistência.' },
+  { image: '/academy/kit-gestao-comercial.png', title: 'Kit de Gestão Comercial', desc: 'Ferramentas e indicadores para quem lidera ou quer liderar um time de vendas.' },
+  { image: '/academy/analises-de-call---yuri-barbosa.png', title: 'Análises de Call — Yuri Barbosa', desc: 'Reviews reais de ligações comerciais com feedback ao vivo.' },
+  { image: '/academy/raio-x-da-personalidade.png', title: 'Raio X da Personalidade', desc: 'Como adaptar sua abordagem ao perfil de cada cliente e vender mais.' },
+  { image: '/academy/lideranca-financeira.png', title: 'Liderança Financeira', desc: 'Como construir inteligência financeira dentro da operação comercial.' },
+  { image: '/academy/mapa-da-otimizacao.png', title: 'Mapa da Otimização', desc: 'Como identificar os gargalos que estão travando seu crescimento.' },
+  { image: '/academy/desafio-plano-sem-risco-2026---matheus-matuta.png', title: 'Desafio Plano Sem Risco 2026', desc: 'Planejamento comercial prático com metas reais para o ano.' },
+  { image: '/academy/a-riqueza-da-necessidade.png', title: 'A Riqueza da Necessidade', desc: 'Como descobrir a dor real do cliente e usá-la como alavanca de venda.' },
+  { image: '/academy/eleve-se.png', title: 'Eleve-se', desc: 'Desenvolvimento pessoal e profissional para vendedores de alto nível.' },
+  { image: '/academy/analise-de-negocios---vinicius-de-sa.png', title: 'Análises de Negócios — Vinícius de Sá', desc: 'Diagnósticos reais de operações comerciais comentados ao vivo.' },
 ]
 
 function ModulesSection() {
   return (
-    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/assets/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,10,30,0.78)', pointerEvents: 'none' }} />
       <div className="section-container" style={{ position: 'relative' }}>
         <FadeUp style={{ textAlign: 'center', marginBottom: 40 }}>
@@ -348,12 +348,12 @@ function ModulesSection() {
    FULL SALES FLIX
 ───────────────────────────────────────────── */
 const flixItems = [
-  { image: '/assets/flix/playbook-estruturacao-comercial-3-0.png', title: 'Playbook Interno de Estruturação Comercial 3.0', desc: 'O guia definitivo para estruturar processos e times comerciais com alto desempenho.' },
-  { image: '/assets/flix/script-quebra-objecoes.png', title: 'Script Secreto para Quebra de Objeções', desc: 'Como lidar com as principais objeções e virar o jogo na negociação.' },
-  { image: '/assets/flix/guia-social-selling.png', title: 'Guia Prático de Social Selling', desc: 'Como usar redes sociais para gerar oportunidades de venda de forma consistente.' },
-  { image: '/assets/flix/estudo-caso-gabriel-bueno.png', title: 'Estudo de Caso: Gabriel Bueno', desc: 'Como um vendedor chegou a 5M de faturamento — análise real, passo a passo.' },
-  { image: '/assets/flix/talk-alfredo-soares.png', title: 'Talk com Alfredo Soares', desc: 'Conteúdo exclusivo gravado no Full Sales Experience 2026.' },
-  { image: '/assets/flix/workshop-social-selling-thiago-germano.png', title: 'Workshop de Social Selling — Thiago Germano', desc: 'Estratégias práticas de vendas pelas redes sociais.' },
+  { image: '/flix/playbook-estruturacao-comercial-3-0.png', title: 'Playbook Interno de Estruturação Comercial 3.0', desc: 'O guia definitivo para estruturar processos e times comerciais com alto desempenho.' },
+  { image: '/flix/script-quebra-objecoes.png', title: 'Script Secreto para Quebra de Objeções', desc: 'Como lidar com as principais objeções e virar o jogo na negociação.' },
+  { image: '/flix/guia-social-selling.png', title: 'Guia Prático de Social Selling', desc: 'Como usar redes sociais para gerar oportunidades de venda de forma consistente.' },
+  { image: '/flix/estudo-caso-gabriel-bueno.png', title: 'Estudo de Caso: Gabriel Bueno', desc: 'Como um vendedor chegou a 5M de faturamento — análise real, passo a passo.' },
+  { image: '/flix/talk-alfredo-soares.png', title: 'Talk com Alfredo Soares', desc: 'Conteúdo exclusivo gravado no Full Sales Experience 2026.' },
+  { image: '/flix/workshop-social-selling-thiago-germano.png', title: 'Workshop de Social Selling — Thiago Germano', desc: 'Estratégias práticas de vendas pelas redes sociais.' },
 ]
 
 function FlixSection() {
@@ -479,7 +479,7 @@ function AboutSection() {
               boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
             }}>
               <Image
-                src="/assets/socios.png"
+                src="/socios.png"
                 alt="Sócios FSS"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center top' }}
@@ -523,11 +523,11 @@ function AboutSection() {
 ───────────────────────────────────────────── */
 
 const pressLogos = [
-  { name: 'Valor Econômico', src: '/assets/press-valor-economico.png', bg: '#FFFFFF', scale: 1.2, href: 'https://valor.globo.com/patrocinado/pressworks/noticia/2025/11/24/full-sales-system-aponta-o-caminho-para-crescer-em-2026-com-estrategias-mais-inteligentes-1.ghtml' },
-  { name: 'Pequenas Empresas & Grandes Negócios', src: '/assets/press-pequenas-empresas.png', bg: '#D35400', scale: 2.3, href: 'https://revistapegn.globo.com/conteudo-de-marca/pressworks/noticia/2025/11/full-sales-system-tres-mentes-empreendedoras-que-transformaram-desafios-em-estrategias-1.ghtml' },
-  { name: 'Band', src: '/assets/press-band.png', bg: '#1A1A1A', scale: 1, href: 'https://www.band.com.br/band-vale/noticias/full-sales-system-aponta-o-caminho-para-crescer-com-estrategia-inteligente-202511211836' },
-  { name: 'Estadão', src: '/assets/estadao-novo.png', bg: '#FFFFFF', scale: 2.0, href: 'https://bluestudio.estadao.com.br/agencia-de-comunicacao/saftec-digital/full-sales-system-tres-mentes-empreendedoras-que-transformaram-desafios-em-estrategias/' },
-  { name: 'Terra', src: '/assets/press-terra.png', bg: '#FFFFFF', scale: 1.0, href: 'https://www.terra.com.br/economia/vendas-que-colocam-sua-empresa-no-protagonismo-full-sales-mostra-o-caminho,f72fe2c2ee9101ee76a02aea5e3eef8c69xd33kv.html' },
+  { name: 'Valor Econômico', src: '/press-valor-economico.png', bg: '#FFFFFF', scale: 1.2, href: 'https://valor.globo.com/patrocinado/pressworks/noticia/2025/11/24/full-sales-system-aponta-o-caminho-para-crescer-em-2026-com-estrategias-mais-inteligentes-1.ghtml' },
+  { name: 'Pequenas Empresas & Grandes Negócios', src: '/press-pequenas-empresas.png', bg: '#D35400', scale: 2.3, href: 'https://revistapegn.globo.com/conteudo-de-marca/pressworks/noticia/2025/11/full-sales-system-tres-mentes-empreendedoras-que-transformaram-desafios-em-estrategias-1.ghtml' },
+  { name: 'Band', src: '/press-band.png', bg: '#1A1A1A', scale: 1, href: 'https://www.band.com.br/band-vale/noticias/full-sales-system-aponta-o-caminho-para-crescer-com-estrategia-inteligente-202511211836' },
+  { name: 'Estadão', src: '/estadao-novo.png', bg: '#FFFFFF', scale: 2.0, href: 'https://bluestudio.estadao.com.br/agencia-de-comunicacao/saftec-digital/full-sales-system-tres-mentes-empreendedoras-que-transformaram-desafios-em-estrategias/' },
+  { name: 'Terra', src: '/press-terra.png', bg: '#FFFFFF', scale: 1.0, href: 'https://www.terra.com.br/economia/vendas-que-colocam-sua-empresa-no-protagonismo-full-sales-mostra-o-caminho,f72fe2c2ee9101ee76a02aea5e3eef8c69xd33kv.html' },
 ]
 
 function PressSection() {
@@ -607,7 +607,7 @@ const offerIncludes = [
 function OfferSection() {
   const withUtms = useWithUtms()
   return (
-    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/assets/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,10,30,0.78)', pointerEvents: 'none' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 20%, rgba(224,21,21,0.14) 0%, transparent 55%), radial-gradient(ellipse at 80% 80%, rgba(30,82,232,0.12) 0%, transparent 55%)', pointerEvents: 'none' }} />
 
@@ -701,7 +701,7 @@ function Footer() {
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 40, marginBottom: 48 }}>
           <div style={{ maxWidth: 300 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-              <img src="/assets/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 40, width: 'auto', display: 'block' }} />
+              <img src="/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 40, width: 'auto', display: 'block' }} />
             </div>
             <p style={{ fontSize: 14, color: '#71717A', lineHeight: 1.65 }}>
               Estruturação comercial para empresas que já faturam e querem crescer com processo e previsibilidade.
