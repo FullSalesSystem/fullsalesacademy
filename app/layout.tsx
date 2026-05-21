@@ -10,7 +10,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'full sales academy',
+  title: 'Full Sales Academy',
   description:
     'Você deu o primeiro passo. Conheça a Full Sales System — a consultoria que já estruturou mais de 550 operações comerciais no Brasil, Portugal e EUA.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'vinícius de sá',
   ],
   openGraph: {
-    title: 'full sales academy',
+    title: 'Full Sales Academy',
     description:
       'Você deu o primeiro passo. Conheça a Full Sales System — a consultoria que já estruturou mais de 550 operações comerciais.',
     type: 'website',
