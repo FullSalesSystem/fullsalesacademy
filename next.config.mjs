@@ -1,5 +1,7 @@
 const nextConfig = {
   output: 'export',
+  basePath: '/fullsalesacademy',
+  assetPrefix: '/fullsalesacademy',
   images: {
     unoptimized: true,
     remotePatterns: [

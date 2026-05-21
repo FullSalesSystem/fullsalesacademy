@@ -94,7 +94,7 @@ function Navbar() {
       transition: 'all 0.35s',
     }}>
       <div className="section-container" style={{ height: 64, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <img src="/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 36, width: 'auto', display: 'block', filter: scrolled ? 'brightness(0)' : 'none' }} />
+        <img src="/fullsalesacademy/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 36, width: 'auto', display: 'block', filter: scrolled ? 'brightness(0)' : 'none' }} />
         <a
           href={withUtms(CHECKOUT_ANUAL_URL)}
           className="btn-primary"
@@ -113,7 +113,7 @@ function Navbar() {
 function AcademyHeroSection() {
   const withUtms = useWithUtms()
   return (
-    <section style={{ paddingTop: 64, paddingBottom: 96, position: 'relative', overflow: 'hidden', backgroundImage: 'url(/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section style={{ paddingTop: 64, paddingBottom: 96, position: 'relative', overflow: 'hidden', backgroundImage: 'url(/fullsalesacademy/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       {/* overlay escuro sobre o background */}
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,10,30,0.72)', pointerEvents: 'none' }} />
 
@@ -261,7 +261,7 @@ const academyModules = [
 
 function ModulesSection() {
   return (
-    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/fullsalesacademy/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,10,30,0.78)', pointerEvents: 'none' }} />
       <div className="section-container" style={{ position: 'relative' }}>
         <FadeUp style={{ textAlign: 'center', marginBottom: 40 }}>
@@ -573,7 +573,7 @@ const offerIncludes = [
 function OfferSection() {
   const withUtms = useWithUtms()
   return (
-    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+    <section className="section-pad" style={{ position: 'relative', overflow: 'hidden', backgroundImage: 'url(/fullsalesacademy/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,10,30,0.78)', pointerEvents: 'none' }} />
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 20% 20%, rgba(224,21,21,0.14) 0%, transparent 55%), radial-gradient(ellipse at 80% 80%, rgba(30,82,232,0.12) 0%, transparent 55%)', pointerEvents: 'none' }} />
 
@@ -667,7 +667,7 @@ function Footer() {
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 40, marginBottom: 48 }}>
           <div style={{ maxWidth: 300 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-              <img src="/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 40, width: 'auto', display: 'block' }} />
+              <img src="/fullsalesacademy/logo-fss-branco.png" alt="Full Sales System" loading="lazy" style={{ height: 40, width: 'auto', display: 'block' }} />
             </div>
             <p style={{ fontSize: 14, color: '#71717A', lineHeight: 1.65 }}>
               Estruturação comercial para empresas que já faturam e querem crescer com processo e previsibilidade.
