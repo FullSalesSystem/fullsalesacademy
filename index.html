@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Meta Pixel -->
   <script>
@@ -23,113 +24,6 @@
     fbq('track','PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=288404690470754&ev=PageView&noscript=1" /></noscript>
-
-  <style>
-    :root {
-      --bg: #FFFFFF;
-      --surface: #F8F9FA;
-      --card: #FFFFFF;
-      --border: rgba(0,0,0,0.08);
-      --accent: #E01515;
-      --accent-dark: #BC1010;
-      --blue: #1E52E8;
-      --text: #0A0A0A;
-      --text-2: #4B5563;
-      --text-3: #9CA3AF;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    ::selection { background: rgba(224,21,21,0.18); color: #0A0A0A; }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #F5F5F5; }
-    ::-webkit-scrollbar-thumb { background: #D1D1D1; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #AAAAAA; }
-
-    img { max-width: 100%; display: block; }
-
-    .section-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .section-pad { padding: 80px 0; }
-    @media (min-width: 768px) { .section-pad { padding: 100px 0; } }
-
-    .btn-primary {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      background: var(--accent); color: #fff; font-weight: 800; font-size: 15px;
-      letter-spacing: -0.01em; padding: 15px 32px; border-radius: 8px; border: none;
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 4px 14px rgba(224,21,21,0.28); white-space: nowrap;
-    }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(224,21,21,0.38); }
-    .btn-primary:active { transform: translateY(0); }
-
-    /* FadeUp */
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-    /* Navbar */
-    #navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      background-color: rgba(10,10,10,0.6);
-      backdrop-filter: blur(14px);
-      transition: all 0.35s;
-    }
-    #navbar.scrolled {
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-      background-color: rgba(255,255,255,0.97);
-    }
-    #navbar .inner { height: 64px; display: flex; align-items: center; justify-content: space-between; }
-    #navbar-logo { height: 36px; width: auto; display: block; transition: filter 0.35s; }
-    #navbar.scrolled #navbar-logo { filter: brightness(0); }
-    #navbar .btn-primary { font-size: 13px; padding: 9px 20px; }
-
-    /* Marquee */
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .marquee-track { display: flex; width: max-content; animation: marquee 30s linear infinite; }
-    .marquee-track:hover { animation-play-state: paused; }
-
-    @keyframes fss-left { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 8px)); } }
-    .fss-row { display: flex; gap: 14px; width: max-content; }
-    .fss-row-1 { animation: fss-left 56s linear infinite; }
-    .fss-overflow { overflow: hidden; width: 100%; position: relative; padding: 6px 0; }
-    .fss-card { display: inline-flex; align-items: center; gap: 10px; background: #1a1a1a; color: #fff; padding: 12px 20px; border-radius: 10px; white-space: nowrap; flex-shrink: 0; font-size: 14px; font-weight: 500; }
-
-    /* Grids */
-    .modules-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
-    @media (max-width: 1024px) { .modules-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } }
-    @media (max-width: 640px)  { .modules-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
-
-    .flix-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
-    @media (max-width: 1024px) { .flix-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
-    @media (max-width: 640px)  { .flix-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
-
-    .media-card { display: flex; flex-direction: column; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; backdrop-filter: blur(4px); }
-    .media-card-img { position: relative; width: 100%; aspect-ratio: 2/3; background: rgba(0,0,0,0.25); overflow: hidden; }
-    .media-card-img img { width: 100%; height: 100%; object-fit: contain; }
-    .media-card-body { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 3px; }
-    .media-card-title { font-size: 11px; font-weight: 700; color: #fff; line-height: 1.3; }
-    .media-card-desc { font-size: 10px; color: rgba(255,255,255,0.65); line-height: 1.45; }
-
-    /* Academy grid for mobile */
-    @media (max-width: 540px) { #academy-grid { grid-template-columns: 1fr !important; } }
-
-    /* Press logos */
-    #press-logos-mobile { display: none; overflow: hidden; position: relative; }
-    @media (max-width: 768px) {
-      #press-logos-desktop { display: none !important; }
-      #press-logos-mobile { display: block !important; }
-    }
-
-    /* About grid */
-    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: center; }
-  </style>
 </head>
 <body>
 
@@ -217,13 +111,11 @@
       <h2 style="font-size:clamp(24px,4vw,40px);font-weight:800;letter-spacing:-0.025em;color:#0A0A0A;line-height:1.12;">O mesmo método que estruturou mais de 600 operações comerciais agora está disponível para você</h2>
       <p style="color:#6B7280;font-size:16px;margin-top:12px;max-width:620px;margin:12px auto 0;">De escritórios de advocacia a empresas de tecnologia, o sistema funciona independente do segmento.</p>
     </div>
-    <!-- Client logos marquee -->
     <div class="fade-up" style="overflow:hidden;margin-bottom:56px;position:relative;">
       <div style="position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(to right,#F5F6F8,transparent);z-index:1;pointer-events:none;"></div>
       <div style="position:absolute;right:0;top:0;bottom:0;width:80px;background:linear-gradient(to left,#F5F6F8,transparent);z-index:1;pointer-events:none;"></div>
       <div class="marquee-track" id="client-logos-track"></div>
     </div>
-    <!-- Areas marquee -->
     <div class="fade-up">
       <div style="text-align:center;margin-bottom:28px;">
         <h3 style="font-size:clamp(18px,2.5vw,26px);font-weight:700;color:#0A0A0A;">Áreas que <strong>já implementamos o nosso processo comercial</strong></h3>
@@ -285,22 +177,10 @@
           <h2 style="font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-0.025em;color:#0A0A0A;line-height:1.18;margin-bottom:16px;">A metodologia que gerou mais de <span style="color:#E01515;">R$1 bilhão</span> para empresas — condensada em uma plataforma acessível</h2>
           <p style="font-size:15px;color:#525252;line-height:1.7;margin-bottom:24px;">Fundada por Vinícius de Sá, Yuri Barbosa e Matheus Garcia, a Full Sales System tem mais de 8 anos estruturando operações comerciais. O Full Sales Academy reúne esse mesmo conhecimento em conteúdos práticos que você aplica a partir de hoje.</p>
           <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
-            <div style="display:flex;gap:10px;align-items:flex-start;">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <p style="font-size:14px;color:#525252;line-height:1.55;">Mais de 600 empresas aceleradas no Brasil, Portugal e EUA em segmentos como advocacia, contabilidade, saúde e tech</p>
-            </div>
-            <div style="display:flex;gap:10px;align-items:flex-start;">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <p style="font-size:14px;color:#525252;line-height:1.55;">Mais de R$1 bilhão em faturamento gerado para empresas aceleradas e mais de R$110 milhões em vendas próprias</p>
-            </div>
-            <div style="display:flex;gap:10px;align-items:flex-start;">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <p style="font-size:14px;color:#525252;line-height:1.55;">NPS de 87 e nota de avaliação 9,44 com foco em resultado real, não só em conteúdo</p>
-            </div>
-            <div style="display:flex;gap:10px;align-items:flex-start;">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <p style="font-size:14px;color:#525252;line-height:1.55;">Metodologia própria de 6 pilares que ativa todos os canais de receita da operação comercial</p>
-            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-size:14px;color:#525252;line-height:1.55;">Mais de 600 empresas aceleradas no Brasil, Portugal e EUA em segmentos como advocacia, contabilidade, saúde e tech</p></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-size:14px;color:#525252;line-height:1.55;">Mais de R$1 bilhão em faturamento gerado para empresas aceleradas e mais de R$110 milhões em vendas próprias</p></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-size:14px;color:#525252;line-height:1.55;">NPS de 87 e nota de avaliação 9,44 com foco em resultado real, não só em conteúdo</p></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.1)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><p style="font-size:14px;color:#525252;line-height:1.55;">Metodologia própria de 6 pilares que ativa todos os canais de receita da operação comercial</p></div>
           </div>
         </div>
       </div>
@@ -317,9 +197,7 @@
     </div>
     <div class="fade-up">
       <div id="press-logos-desktop" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;"></div>
-      <div id="press-logos-mobile">
-        <div class="marquee-track" style="animation-duration:18s;" id="press-logos-mobile-track"></div>
-      </div>
+      <div id="press-logos-mobile"><div class="marquee-track" style="animation-duration:18s;" id="press-logos-mobile-track"></div></div>
       <p style="text-align:center;color:#6B7280;font-size:14px;margin-top:20px;">Clique aqui para ver as matérias na íntegra</p>
     </div>
   </div>
@@ -356,166 +234,6 @@
   </div>
 </footer>
 
-<script>
-  // ── UTM FORWARDING ──
-  const CHECKOUT_ANUAL_URL  = 'https://clkdmg.site/subscribe/oto-anual-fssflix'
-  const CHECKOUT_MENSAL_URL = 'https://clkdmg.site/subscribe/oto-mensal-fssflix'
-  const FORWARDED_PARAMS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','gclid','fbclid','gad_source','msclkid']
-
-  function withUtms(url) {
-    const params = new URLSearchParams(window.location.search)
-    const forwarded = new URLSearchParams()
-    FORWARDED_PARAMS.forEach(k => { const v = params.get(k); if (v) forwarded.set(k, v) })
-    const qs = forwarded.toString()
-    if (!qs) return url
-    return url + (url.includes('?') ? '&' : '?') + qs
-  }
-
-  // ── SET CTA LINKS ──
-  document.querySelectorAll('#nav-cta, #hero-cta, #offer-cta, #footer-cta').forEach(el => {
-    el.href = withUtms(CHECKOUT_ANUAL_URL)
-  })
-
-  // ── YEAR ──
-  document.getElementById('year').textContent = new Date().getFullYear()
-
-  // ── NAVBAR SCROLL ──
-  const navbar = document.getElementById('navbar')
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 560)
-    // update CTA links on scroll (UTMs are same)
-  }, { passive: true })
-
-  // ── FADE UP OBSERVER ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target) } })
-  }, { threshold: 0.12 })
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
-
-  // ── DATA ──
-  const academyModules = [
-    { image: 'public/academy/vendedor-top-1.png', title: 'Vendedor Top 1', desc: 'Mindset, método e execução para se tornar o top performer da sua área.' },
-    { image: 'public/academy/master-sales-script.png', title: 'Master Sales Script', desc: 'Scripts completos prontos para prospecção, follow-up e fechamento.' },
-    { image: 'public/academy/persuasao-pro.png', title: 'Persuasão Pro', desc: 'Técnicas avançadas de influência, rapport e negociação para fechar mais.' },
-    { image: 'public/academy/workshop-prospeccao-7d.png', title: 'Workshop Prospecção 7D', desc: 'Um plano prático para gerar demanda e encher o funil em 7 dias.' },
-    { image: 'public/academy/intensivo-fechamento-em-reuniao.png', title: 'Intensivo Fechamento em Reunião', desc: 'Como conduzir e fechar reuniões comerciais com consistência.' },
-    { image: 'public/academy/kit-gestao-comercial.png', title: 'Kit de Gestão Comercial', desc: 'Ferramentas e indicadores para quem lidera ou quer liderar um time de vendas.' },
-    { image: 'public/academy/analises-de-call---yuri-barbosa.png', title: 'Análises de Call — Yuri Barbosa', desc: 'Reviews reais de ligações comerciais com feedback ao vivo.' },
-    { image: 'public/academy/raio-x-da-personalidade.png', title: 'Raio X da Personalidade', desc: 'Como adaptar sua abordagem ao perfil de cada cliente e vender mais.' },
-    { image: 'public/academy/lideranca-financeira.png', title: 'Liderança Financeira', desc: 'Como construir inteligência financeira dentro da operação comercial.' },
-    { image: 'public/academy/mapa-da-otimizacao.png', title: 'Mapa da Otimização', desc: 'Como identificar os gargalos que estão travando seu crescimento.' },
-    { image: 'public/academy/desafio-plano-sem-risco-2026---matheus-matuta.png', title: 'Desafio Plano Sem Risco 2026', desc: 'Planejamento comercial prático com metas reais para o ano.' },
-    { image: 'public/academy/a-riqueza-da-necessidade.png', title: 'A Riqueza da Necessidade', desc: 'Como descobrir a dor real do cliente e usá-la como alavanca de venda.' },
-    { image: 'public/academy/eleve-se.png', title: 'Eleve-se', desc: 'Desenvolvimento pessoal e profissional para vendedores de alto nível.' },
-    { image: 'public/academy/analise-de-negocios---vinicius-de-sa.png', title: 'Análises de Negócios — Vinícius de Sá', desc: 'Diagnósticos reais de operações comerciais comentados ao vivo.' },
-  ]
-
-  const flixItems = [
-    { image: 'public/flix/playbook-estruturacao-comercial-3-0.png', title: 'Playbook Interno de Estruturação Comercial 3.0', desc: 'O guia definitivo para estruturar processos e times comerciais com alto desempenho.' },
-    { image: 'public/flix/script-quebra-objecoes.png', title: 'Script Secreto para Quebra de Objeções', desc: 'Como lidar com as principais objeções e virar o jogo na negociação.' },
-    { image: 'public/flix/guia-social-selling.png', title: 'Guia Prático de Social Selling', desc: 'Como usar redes sociais para gerar oportunidades de venda de forma consistente.' },
-    { image: 'public/flix/estudo-caso-gabriel-bueno.png', title: 'Estudo de Caso: Gabriel Bueno', desc: 'Como um vendedor chegou a 5M de faturamento — análise real, passo a passo.' },
-    { image: 'public/flix/talk-alfredo-soares.png', title: 'Talk com Alfredo Soares', desc: 'Conteúdo exclusivo gravado no Full Sales Experience 2026.' },
-    { image: 'public/flix/workshop-social-selling-thiago-germano.png', title: 'Workshop de Social Selling — Thiago Germano', desc: 'Estratégias práticas de vendas pelas redes sociais.' },
-  ]
-
-  const clientLogos = [
-    { src: 'public/cliente-ajs.png', name: 'AJS' }, { src: 'public/cliente-dm.png', name: 'DM' },
-    { src: 'public/cliente-hotelaria.png', name: 'Hotelaria' }, { src: 'public/cliente-instituto.png', name: 'Instituto' },
-    { src: 'public/cliente-kaizen.png', name: 'Kaizen' }, { src: 'public/cliente-maximus.png', name: 'Maximus' },
-    { src: 'public/cliente-mbi.png', name: 'MBI' }, { src: 'public/cliente-mental.png', name: 'Mental One' },
-    { src: 'public/cliente-perpetuo.png', name: 'Perpétuo' }, { src: 'public/cliente-positiva.png', name: 'Positiva' },
-    { src: 'public/cliente-salvus.png', name: 'Salvus' }, { src: 'public/cliente-taugor.png', name: 'Taugor' },
-    { src: 'public/cliente-ticto.png', name: 'Ticto' }, { src: 'public/cliente-tio.png', name: 'Tio' },
-  ]
-
-  const pressLogos = [
-    { name: 'Valor Econômico', src: 'public/press-valor-economico.png', bg: '#FFFFFF', scale: 1.2, href: 'https://valor.globo.com/patrocinado/pressworks/noticia/2025/11/24/full-sales-system-aponta-o-caminho-para-crescer-em-2026-com-estrategias-mais-inteligentes-1.ghtml' },
-    { name: 'Pequenas Empresas & Grandes Negócios', src: 'public/press-pequenas-empresas.png', bg: '#D35400', scale: 2.3, href: 'https://revistapegn.globo.com/conteudo-de-marca/pressworks/noticia/2025/11/full-sales-system-tres-mentes-empreendedoras-que-transformaram-desafios-em-estrategias-1.ghtml' },
-    { name: 'Band', src: 'public/press-band.png', bg: '#1A1A1A', scale: 1, href: 'https://www.band.com.br/band-vale/noticias/full-sales-system-aponta-o-caminho-para-crescer-com-estrategia-inteligente-202511211836' },
-    { name: 'Estadão', src: 'public/estadao-novo.png', bg: '#FFFFFF', scale: 2.0, href: 'https://bluestudio.estadao.com.br/agencia-de-comunicacao/saftec-digital/full-sales-system-tres-mentes-empreendedoras-que-transformaram-desafios-em-estrategias/' },
-    { name: 'Terra', src: 'public/press-terra.png', bg: '#FFFFFF', scale: 1.0, href: 'https://www.terra.com.br/economia/vendas-que-colocam-sua-empresa-no-protagonismo-full-sales-mostra-o-caminho,f72fe2c2ee9101ee76a02aea5e3eef8c69xd33kv.html' },
-  ]
-
-  const areas = [
-    { icon: '🏢', text: 'Empresarial' }, { icon: '📢', text: 'Marketing' }, { icon: '🎤', text: 'Eventos' },
-    { icon: '⚕️', text: 'Médicos' }, { icon: '💡', text: 'Mentoria / Consultoria' }, { icon: '⚖️', text: 'Advocacia' },
-    { icon: '🏪', text: 'Franquia' }, { icon: '💰', text: 'Financeiro' }, { icon: '🎨', text: 'Branding / Posicionamento' },
-    { icon: '🏭', text: 'Serviços / Indústria' }, { icon: '💬', text: 'Comercial' }, { icon: '📊', text: 'Contábil / Tributário' },
-    { icon: '💆', text: 'Saúde Estética' }, { icon: '☁️', text: 'SAAS (Software as Service)' }, { icon: '⚡', text: 'Energia Solar' },
-    { icon: '💻', text: 'Software House' }, { icon: '📱', text: 'Mercado Digital' }, { icon: '📡', text: 'Comunicação' },
-    { icon: '🏗️', text: 'Civil / Imobiliário' }, { icon: '🎓', text: 'Educação' },
-  ]
-
-  const offerIncludes = [
-    'Mais de 14 módulos e cursos completos do Full Sales Academy',
-    'Acesso completo ao Full Sales Flix e sua biblioteca de playbooks e guias',
-    'Workshops exclusivos com especialistas convidados',
-    'Análises de call reais comentadas por Yuri Barbosa',
-    'Diagnósticos de negócios ao vivo com Vinícius de Sá',
-    'Atualizações e novos conteúdos incluídos sem custo adicional',
-    'Acesso imediato após a confirmação do pagamento',
-  ]
-
-  // ── RENDER MODULES ──
-  const modulesGrid = document.getElementById('modules-grid-el')
-  academyModules.forEach(m => {
-    modulesGrid.innerHTML += `
-      <div class="media-card">
-        <div class="media-card-img"><img src="${m.image}" alt="${m.title}" loading="lazy" /></div>
-        <div class="media-card-body"><div class="media-card-title">${m.title}</div><p class="media-card-desc">${m.desc}</p></div>
-      </div>`
-  })
-
-  // ── RENDER FLIX ──
-  const flixGrid = document.getElementById('flix-grid-el')
-  flixItems.forEach(f => {
-    flixGrid.innerHTML += `
-      <div class="media-card">
-        <div class="media-card-img"><img src="${f.image}" alt="${f.title}" loading="lazy" /></div>
-        <div class="media-card-body"><div class="media-card-title">${f.title}</div><p class="media-card-desc">${f.desc}</p></div>
-      </div>`
-  })
-
-  // ── RENDER CLIENT LOGOS ──
-  const track = document.getElementById('client-logos-track')
-  ;[...clientLogos, ...clientLogos].forEach(logo => {
-    track.innerHTML += `<div style="flex-shrink:0;width:160px;height:72px;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-right:12px;">
-      <img src="${logo.src}" alt="${logo.name}" style="object-fit:contain;width:100%;height:100%;" loading="lazy" /></div>`
-  })
-
-  // ── RENDER AREAS ──
-  const areasTrack = document.getElementById('areas-track')
-  ;[...areas, ...areas].forEach(a => {
-    areasTrack.innerHTML += `<div class="fss-card"><span>${a.icon}</span><span>${a.text}</span></div>`
-  })
-
-  // ── RENDER OFFER INCLUDES ──
-  const offerEl = document.getElementById('offer-includes')
-  offerIncludes.forEach(item => {
-    offerEl.innerHTML += `<div style="display:flex;gap:12px;align-items:flex-start;">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="flex-shrink:0;margin-top:2px;"><circle cx="10" cy="10" r="10" fill="rgba(224,21,21,0.18)"/><path d="M6 10.5L8.8 13L14 7" stroke="#E01515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <p style="font-size:15px;color:rgba(255,255,255,0.82);line-height:1.55;">${item}</p></div>`
-  })
-
-  // ── RENDER PRESS LOGOS ──
-  const pressDesktop = document.getElementById('press-logos-desktop')
-  const pressMobile = document.getElementById('press-logos-mobile-track')
-  pressLogos.forEach(logo => {
-    const card = `<a href="${logo.href}" target="_blank" rel="noopener noreferrer" aria-label="Ler matéria em ${logo.name}" style="height:72px;width:180px;background:${logo.bg};border:1px solid rgba(0,0,0,0.09);border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.10)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)'">
-      <img src="${logo.src}" alt="${logo.name}" style="object-fit:contain;width:100%;height:100%;transform:scale(${logo.scale});transform-origin:center center;" loading="lazy" /></a>`
-    pressDesktop.innerHTML += card
-  })
-  ;[...pressLogos, ...pressLogos].forEach(logo => {
-    pressMobile.innerHTML += `<a href="${logo.href}" target="_blank" rel="noopener noreferrer" style="flex-shrink:0;height:64px;width:150px;background:${logo.bg};border:1px solid rgba(0,0,0,0.09);border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-right:12px;text-decoration:none;">
-      <img src="${logo.src}" alt="${logo.name}" style="object-fit:contain;width:100%;height:100%;transform:scale(${logo.scale});transform-origin:center center;" loading="lazy" /></a>`
-  })
-
-  // ── META PIXEL EVENTS ──
-  if (typeof fbq !== 'undefined') {
-    fbq('trackCustom','Pageview-lead-desqualificado-geral')
-    fbq('trackCustom','Lead_desqualificado_FAP01')
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
