@@ -86,50 +86,16 @@ function Navbar() {
 }
 
 /* ─────────────────────────────────────────────
-   NOTIFICATION BAR — confirmação de aplicação
-───────────────────────────────────────────── */
-function NotificationBar() {
-  return (
-    <div style={{
-      position: 'relative',
-      zIndex: 2,
-      background: '#E01515',
-      color: '#FFFFFF',
-      padding: '14px 20px',
-      textAlign: 'center',
-      fontSize: 'clamp(13px, 1.6vw, 16px)',
-      fontWeight: 800,
-      letterSpacing: '0.01em',
-      lineHeight: 1.4,
-      textTransform: 'uppercase',
-    }}>
-      Sua aplicação foi recebida. Nosso time entrará em contato em breve para agendar sua reunião de diagnóstico.
-    </div>
-  )
-}
-
-/* ─────────────────────────────────────────────
    ACADEMY HERO — dark, com pricing
 ───────────────────────────────────────────── */
 function AcademyHeroSection() {
   return (
     <section style={{ paddingTop: 64, paddingBottom: 96, position: 'relative', overflow: 'hidden', backgroundImage: 'url(/background-fss.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-      <NotificationBar />
       {/* overlay escuro sobre o background */}
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,10,30,0.72)', pointerEvents: 'none' }} />
 
       <div className="section-container" style={{ position: 'relative', maxWidth: 860, textAlign: 'center', paddingTop: 72 }}>
         <FadeUp>
-
-          <p style={{
-            fontSize: 'clamp(15px, 2vw, 18px)',
-            color: 'rgba(255,255,255,0.6)',
-            lineHeight: 1.65,
-            maxWidth: 680,
-            margin: '0 auto 16px',
-          }}>
-            Enquanto isso, use esse tempo a seu favor...
-          </p>
 
           <h1 style={{
             fontSize: 'clamp(22px, 3.4vw, 40px)',
