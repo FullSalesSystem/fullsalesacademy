@@ -264,11 +264,47 @@ function ModulesSection() {
 /* ─────────────────────────────────────────────
    FULL SALES FLIX
 ───────────────────────────────────────────── */
-const flixFeatures = [
-  { icon: '📘', title: 'Playbooks prontos', desc: 'Modelos operacionais para aplicar direto na sua empresa.' },
-  { icon: '🎬', title: 'Análises de call reais', desc: 'Casos comentados por Yuri Barbosa com diagnósticos precisos.' },
-  { icon: '🗺️', title: 'Guias práticos', desc: 'Passo a passo detalhado para cada etapa do processo comercial.' },
-  { icon: '🎤', title: 'Workshops exclusivos', desc: 'Encontros com especialistas convidados e conteúdo novo toda semana.' },
+const flixItems = [
+  {
+    src: '/flix/playbook-estruturacao.png',
+    title: 'Playbook Interno de Estruturação Comercial 3.0',
+    desc: 'O guia definitivo para estruturar processos e times comerciais com alto desempenho.',
+  },
+  {
+    src: '/flix/guia-social-selling.png',
+    title: 'Guia Prático de Social Selling',
+    desc: 'Como usar redes sociais para gerar oportunidades de venda de forma consistente.',
+  },
+  {
+    src: '/flix/estudo-de-caso.png',
+    title: 'Estudo de Caso',
+    desc: 'Como um vendedor chegou a 5M de faturamento — análise real, passo a passo.',
+  },
+  {
+    src: '/flix/bonus-1-apresentacao-comercial.png',
+    title: 'Bônus 1: Como fazer uma Apresentação Comercial',
+    desc: 'Estrutura e técnicas para apresentações comerciais que convertem.',
+  },
+  {
+    src: '/flix/bonus-2-workshop-thiago.png',
+    title: 'Bônus 2: Workshop de Social Selling — Thiago Germano',
+    desc: 'Estratégias práticas de vendas pelas redes sociais.',
+  },
+  {
+    src: '/flix/bonus-3-alfredo-soares.png',
+    title: 'Bônus 3: Talk com Alfredo Soares',
+    desc: 'Conteúdo exclusivo gravado no Full Sales Experience 2026.',
+  },
+  {
+    src: '/flix/podcast-comercial-faixa-preta.png',
+    title: 'Podcast Comercial Faixa Preta',
+    desc: 'Conversas profundas sobre alta performance em vendas com especialistas convidados.',
+  },
+  {
+    src: '/flix/podcast-full-sales.png',
+    title: 'Podcast Full Sales',
+    desc: 'Insights e bastidores do método que já estruturou mais de 600 operações comerciais.',
+  },
 ]
 
 function FlixSection() {
@@ -291,17 +327,16 @@ function FlixSection() {
         </FadeUp>
 
         <FadeUp delay={80}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
-            {flixFeatures.map((f, i) => (
-              <div key={i} style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                borderRadius: 14,
-                padding: '24px 22px',
-              }}>
-                <div style={{ fontSize: 28, lineHeight: 1, marginBottom: 14 }}>{f.icon}</div>
-                <div style={{ fontSize: 16, fontWeight: 700, color: '#FFFFFF', marginBottom: 6 }}>{f.title}</div>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.55 }}>{f.desc}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 20 }}>
+            {flixItems.map((item, i) => (
+              <div key={i} style={{ display: 'flex', flexDirection: 'column' }}>
+                <div style={{ position: 'relative', width: '100%', aspectRatio: '3/4', borderRadius: 14, overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.45)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <Image src={item.src} alt={item.title} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 50vw, 240px" />
+                </div>
+                <div style={{ marginTop: 16 }}>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: '#FFFFFF', lineHeight: 1.35, marginBottom: 8 }}>{item.title}</div>
+                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', lineHeight: 1.55 }}>{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
