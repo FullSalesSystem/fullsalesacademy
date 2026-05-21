@@ -83,7 +83,7 @@ const offerIncludes = [
 document.addEventListener('DOMContentLoaded', () => {
 
   // Links de checkout com UTMs
-  document.querySelectorAll('#nav-cta, #hero-cta, #offer-cta, #footer-cta').forEach(el => {
+  document.querySelectorAll('#nav-cta, #hero-cta, #offer-cta, #footer-cta, #exit-popup-cta').forEach(el => {
     el.href = withUtms(CHECKOUT_ANUAL_URL)
   })
 
@@ -161,6 +161,48 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof fbq !== 'undefined') {
     fbq('trackCustom', 'Pageview-lead-desqualificado-geral')
     fbq('trackCustom', 'Lead_desqualificado_FAP01')
+  }
+
+  // ── EXIT POPUP ──
+  const popup = document.getElementById('exit-popup')
+  if (popup) {
+    let shown = sessionStorage.getItem('fss-exit-popup-shown') === '1'
+
+    const openPopup = () => {
+      if (shown) return
+      shown = true
+      sessionStorage.setItem('fss-exit-popup-shown', '1')
+      popup.classList.add('is-open')
+      popup.setAttribute('aria-hidden', 'false')
+      document.body.classList.add('exit-popup-open')
+    }
+
+    const closePopup = () => {
+      popup.classList.remove('is-open')
+      popup.setAttribute('aria-hidden', 'true')
+      document.body.classList.remove('exit-popup-open')
+    }
+
+    // Fechar: botão, clique no backdrop, ESC
+    popup.querySelector('.exit-popup-close').addEventListener('click', closePopup)
+    popup.addEventListener('click', (e) => { if (e.target === popup) closePopup() })
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && popup.classList.contains('is-open')) closePopup()
+    })
+    // CTA também fecha (antes de navegar)
+    document.getElementById('exit-popup-cta').addEventListener('click', closePopup)
+
+    // Gatilho desktop: mouse sai pelo topo
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY <= 0) openPopup()
+    })
+
+    // Gatilho mobile: botão voltar
+    const isTouch = window.matchMedia('(hover: none)').matches
+    if (isTouch && !shown) {
+      history.pushState({ fssExitPopup: true }, '')
+      window.addEventListener('popstate', () => openPopup())
+    }
   }
 
 })
