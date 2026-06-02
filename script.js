@@ -172,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (shown) return
       shown = true
       sessionStorage.setItem('fss-exit-popup-shown', '1')
+      popup.hidden = false
       popup.classList.add('is-open')
       popup.setAttribute('aria-hidden', 'false')
       document.body.classList.add('exit-popup-open')
@@ -179,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const closePopup = () => {
       popup.classList.remove('is-open')
+      popup.hidden = true
       popup.setAttribute('aria-hidden', 'true')
       document.body.classList.remove('exit-popup-open')
     }
