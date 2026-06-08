@@ -90,12 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Ano no footer
   document.getElementById('year').textContent = new Date().getFullYear()
 
-  // Navbar scroll
-  const navbar = document.getElementById('navbar')
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 560)
-  }, { passive: true })
-
   // Fade up com IntersectionObserver
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {

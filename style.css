@@ -56,15 +56,9 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid rgba(255,255,255,0.08);
   background-color: rgba(10,10,10,0.6);
   backdrop-filter: blur(14px);
-  transition: all 0.35s;
-}
-#navbar.scrolled {
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  background-color: rgba(255,255,255,0.97);
 }
 #navbar .inner { height: 64px; display: flex; align-items: center; justify-content: space-between; }
-#navbar-logo { height: 36px; width: auto; display: block; transition: filter 0.35s; }
-#navbar.scrolled #navbar-logo { filter: brightness(0); }
+#navbar-logo { height: 36px; width: auto; display: block; }
 #navbar .btn-primary { font-size: 13px; padding: 9px 20px; }
 
 /* ── MARQUEE ── */
